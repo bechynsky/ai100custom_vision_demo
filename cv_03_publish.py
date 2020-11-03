@@ -13,7 +13,7 @@ from cv_00_credentials import prediction_resource_id
 credentials = ApiKeyCredentials(in_headers={"Training-key": training_key})
 trainer = CustomVisionTrainingClient(ENDPOINT, credentials)
 
-project = trainer.get_project('45c075f2-d539-4605-ae0a-1f05f051c289')
+project = trainer.get_projects()[0]
 
 print('Project ' + project.name + ' loaded.')
 
