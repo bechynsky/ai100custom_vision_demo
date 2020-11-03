@@ -18,8 +18,7 @@ trainer = CustomVisionTrainingClient(ENDPOINT, credentials)
 # Create a new project
 print ("Creating project...")
 project = trainer.create_project("Garden Birds")
-os.environ['CV_PROJECT_ID'] = project.id
-print('Project ID: ' + project.id)
+
 
 # Make tags in the new project
 # Set the directory you want to start from
@@ -64,3 +63,4 @@ for tag in tags:
         with open(base_image_url+file_name, "rb") as image_contents:
             trainer.create_images_from_data(project.id, image_contents.read(), tag_ids=[tag_id])
         
+print('Project ID: ' + project.id)
