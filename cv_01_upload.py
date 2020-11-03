@@ -18,23 +18,24 @@ trainer = CustomVisionTrainingClient(ENDPOINT, credentials)
 # Create a new project
 print ("Creating project...")
 project = trainer.create_project("Garden Birds")
-os.environ['CV_PROJECT_ID'] = project.id 
+os.environ['CV_PROJECT_ID'] = project.id
 print('Project ID: ' + project.id)
 
 # Make tags in the new project
 # Set the directory you want to start from
-os.chdir('~/birds')
+image_folder = os.getenv("HOME") + '/birds'
+os.chdir(image_folder)
 tags = [name for name in os.listdir('.') if os.path.isdir(name)]
 print(tags)
 
 def createTag(tag):
     result = trainer.create_tag(project.id, tag)
-    print(f'{tag} create with id: {result}')
+    print('{tag} create with id: {result}')
     return result.id
 
 def createImageList(tag, tag_id):
     # Set directory to current tag
-    base_image_url = f"./{tag}/"
+    base_image_url = image_folder + "/" + tag + "/"
     photo_name_list = os.listdir(base_image_url)
     image_list = []
     for file_name in photo_name_list[0:49]:
@@ -52,10 +53,10 @@ def uploadImageList(image_list):
 
 for tag in tags:
     tag_id = createTag(tag)
-    print(f"tag creation done with tag id {tag_id}")
+    print("tag creation done with tag id {tag_id}")
 
     # Set directory to current tag
-    base_image_url = f"./{tag}/"
+    base_image_url = image_folder + "/" + tag + "/"
     photo_name_list = os.listdir(base_image_url)
     
     for file_name in photo_name_list[0:21]:
@@ -63,4 +64,3 @@ for tag in tags:
         with open(base_image_url+file_name, "rb") as image_contents:
             trainer.create_images_from_data(project.id, image_contents.read(), tag_ids=[tag_id])
         
-
