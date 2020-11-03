@@ -24,6 +24,7 @@ project = trainer.create_project("Garden Birds")
 # Set the directory you want to start from
 image_folder = os.getenv("HOME") + '/birds'
 os.chdir(image_folder)
+# Tag = Directory name
 tags = [name for name in os.listdir('.') if os.path.isdir(name)]
 print(tags)
 
