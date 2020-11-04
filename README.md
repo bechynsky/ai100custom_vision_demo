@@ -127,3 +127,11 @@ List of pictures and credits used for Custom Vison training. We use some birds p
 - [https://commons.wikimedia.org/wiki/File:Hunting_for_ants_(23473243160).jpg](https://commons.wikimedia.org/wiki/File:Hunting_for_ants_(23473243160).jpg)
 - [https://commons.wikimedia.org/wiki/File:In_the_grass_(27114854860).jpg](https://commons.wikimedia.org/wiki/File:In_the_grass_(27114854860).jpg)
 - [https://commons.wikimedia.org/wiki/File:Mrs_Woodpecker_(35201395064).jpg](https://commons.wikimedia.org/wiki/File:Mrs_Woodpecker_(35201395064).jpg)
+
+## Test Images
+
+- [https://commons.wikimedia.org/wiki/File:WoodPecker_Pivert_in_59650_(2).JPG](https://commons.wikimedia.org/wiki/File:WoodPecker_Pivert_in_59650_(2).JPG)
+- [https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg](https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg)
+- [https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg](https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg)
+- [https://commons.wikimedia.org/wiki/File:Kohlmeise_(23)_(34632808830).jpg](https://commons.wikimedia.org/wiki/File:Kohlmeise_(23)_(34632808830).jpg)
+- [https://commons.wikimedia.org/wiki/File:Common_blackbird_(Turdus_merula_mauretanicus)_female.jpg](https://commons.wikimedia.org/wiki/File:Common_blackbird_(Turdus_merula_mauretanicus)_female.jpg)
