@@ -1,24 +1,38 @@
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
+from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
+
 from msrest.authentication import ApiKeyCredentials
 from cv_00_credentials import ENDPOINT
+from cv_00_credentials import training_key
 from cv_00_credentials import prediction_key
 from cv_00_credentials import prediction_resource_id
-from cv_00_credentials import project_id
+
+credentials_training = ApiKeyCredentials(in_headers={"Training-key": training_key})
+trainer = CustomVisionTrainingClient(ENDPOINT, credentials_training)
+
+# It is just demo, we use first project in Custom Vison resource
+project = trainer.get_projects()[0]
+print('Project: ' + project.name)
+
+# It is just demo, we use first iteration in Custom Vison resource
+iteration = trainer.get_iterations(project.id)[0]
+print('Iteration' + iteration.name)
 
 
-# Example of default iteration name would be "Iteration1"
-publish_iteration_name = "Iteration 1"
+credentials_prediction = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
+predictor = CustomVisionPredictionClient(ENDPOINT, credentials_prediction)
 
+image_urls = ['https://upload.wikimedia.org/wikipedia/commons/5/57/WoodPecker_Pivert_in_59650_%282%29.JPG', \
+'https://upload.wikimedia.org/wikipedia/commons/0/01/Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg', \
+'https://upload.wikimedia.org/wikipedia/commons/b/b2/Pica_1450098_Nevit.jpg' \
+'https://upload.wikimedia.org/wikipedia/commons/4/43/Kohlmeise_%2823%29_%2834632808830%29.jpg' \
+'https://upload.wikimedia.org/wikipedia/commons/7/72/Common_blackbird_%28Turdus_merula_mauretanicus%29_female.jpg']
 
-credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
-predictor = CustomVisionPredictionClient(ENDPOINT, credentials)
-
-base_image_url = 'C:/Users/stbechyn/Pictures/Birds/'
-with open(base_image_url + "Turdus_merula_Male/Blackbird_%2827967533735%29.jpg", "rb") as image_contents:
-    results = predictor.classify_image(
-        project_id, publish_iteration_name, image_contents.read())
+for image_url in image_urls:
+    results = predictor.classify_image_url(project.id, iteration.name, url=image_url)
 
     # Display the results.
     for prediction in results.predictions:
         print("\t" + prediction.tag_name +
               ": {0:.2f}%".format(prediction.probability * 100))
+
