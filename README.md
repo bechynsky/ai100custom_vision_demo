@@ -136,4 +136,4 @@ We do not download test images. We use URL in [cv_04_test.py](cv_04_test.py) scr
 - [https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg](https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg)
 - [https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg](https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg)
 - [https://commons.wikimedia.org/wiki/File:Kohlmeise_(23)_(34632808830).jpg](https://commons.wikimedia.org/wiki/File:Kohlmeise_(23)_(34632808830).jpg)
-- [https://commons.wikimedia.org/wiki/File:Common_blackbird_(Turdus_merula_mauretanicus)_female.jpg](https://commons.wikimedia.org/wiki/File:Common_blackbird_(Turdus_merula_mauretanicus)_female.jpg)
+- [https://commons.wikimedia.org/wiki/File:Merel_(Turdus_merula).jpg](https://commons.wikimedia.org/wiki/File:Merel_(Turdus_merula).jpg)
