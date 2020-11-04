@@ -1,6 +1,5 @@
 # Custom Vision modules
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
-from azure.cognitiveservices.vision.customvision.training.models import ImageFileCreateEntry
 from msrest.authentication import ApiKeyCredentials
 
 
@@ -13,13 +12,12 @@ trainer = CustomVisionTrainingClient(ENDPOINT, credentials)
 
 # It is just demo, we use first project in Custom Vison resource
 project = trainer.get_projects()[0]
-
-print('Project ' + project.name + ' loaded.')
+print('Project: ' + project.name)
 
 # It is just demo, we use first iteration in Custom Vison resource
 iteration = trainer.get_iterations(project.id)[0]
 
-print(iteration)
+print('Iteration: '+ iteration.name)
 
 published = trainer.publish_iteration(project.id, iteration.id, iteration.name, prediction_resource_id)
 
