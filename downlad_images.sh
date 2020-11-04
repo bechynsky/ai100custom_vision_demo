@@ -126,13 +126,3 @@ curl -O https://upload.wikimedia.org/wikipedia/commons/f/fb/Hunting_for_ants_%28
 curl -O https://upload.wikimedia.org/wikipedia/commons/0/0f/In_the_grass_%2827114854860%29.jpg
 curl -O https://upload.wikimedia.org/wikipedia/commons/9/95/Mrs_Woodpecker_%2835201395064%29.jpg
 cd ..
-
-echo "test"
-mkdir test
-cd test
-curl -O https://upload.wikimedia.org/wikipedia/commons/5/57/WoodPecker_Pivert_in_59650_%282%29.JPG
-curl -O https://upload.wikimedia.org/wikipedia/commons/0/01/Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg
-curl -O https://upload.wikimedia.org/wikipedia/commons/b/b2/Pica_1450098_Nevit.jpg
-curl -O https://upload.wikimedia.org/wikipedia/commons/4/43/Kohlmeise_%2823%29_%2834632808830%29.jpg
-curl -O https://upload.wikimedia.org/wikipedia/commons/7/72/Common_blackbird_%28Turdus_merula_mauretanicus%29_female.jpg
-cd ~
