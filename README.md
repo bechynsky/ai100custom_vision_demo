@@ -130,6 +130,8 @@ List of pictures and credits used for Custom Vison training. We use some birds p
 
 ## Test Images
 
+We do not download test images. We use URL in [cv_04_test.py](cv_04_test.py) script.
+
 - [https://commons.wikimedia.org/wiki/File:WoodPecker_Pivert_in_59650_(2).JPG](https://commons.wikimedia.org/wiki/File:WoodPecker_Pivert_in_59650_(2).JPG)
 - [https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg](https://commons.wikimedia.org/wiki/File:Un_passerotto_su_un_olivo_nella_primavera_2020_Uccellino.jpg)
 - [https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg](https://commons.wikimedia.org/wiki/File:Pica_1450098_Nevit.jpg)
