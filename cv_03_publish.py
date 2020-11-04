@@ -1,5 +1,3 @@
-import time
-
 # Custom Vision modules
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.training.models import ImageFileCreateEntry
@@ -23,5 +21,6 @@ iteration = trainer.get_iterations(project.id)[0]
 
 print(iteration)
 
-trainer.publish_iteration(project.id, iteration.id, iteration.name, prediction_resource_id)
+published = trainer.publish_iteration(project.id, iteration.id, iteration.name, prediction_resource_id)
+
 
