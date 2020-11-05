@@ -2,11 +2,45 @@
 
 Demos for AI-10X training and certification. It can be used by trainer or by attendees as homework. Goal is to understand how to programaticaly create, train and publish Custom Vison project.
 
-# Steps
+# Preparation
 
-- Install Python modules
-  - ```sudo apt install python3-pip```
-- Run
+- Login to [Azure Cloud Shell](https://shell.azure.com).
+- Clone this repository.
+  - ```git clone https://github.com/bechynsky/ai100demos.git```
+- Install Python libraries.
+  - ```pip install azure-cognitiveservices-speech```
+- Goto ```ai100demos``` folder.
+- Run ```code .``` to open code editor to see code.
+- Run [new_cognitiveservices.ps1](new_cognitiveservices.ps1).
+  - All information like endpoint and service key is stored in Environment variables. 
+  - Check environment variables we create ```printenv | grep CV_``` or ```Get-ChildItem env:* | Where-Object {$_.Name -like 'CV_*'}```.
+  - It is not persistent and information is lost after Azure Cloud Shell restarts.
+  - Copy output of script for future reference.
+- Download sample images
+  - ```sh ./download_images.sh```
+- Run ```code .``` to open code editor to see code.
+
+# Step 0 [cv_00_credentials.py](cv_00_credentials.py)
+
+This file only reads requiried environment variables.
+
+# Step 1 [cv_01_upload.py](cv_01_upload.py)
+
+- Creates Custom Vison project.
+- Reads directory list and create tag for each directory.
+- Upload images with tag based on directory name.
+
+# Step 2 [cv_02_train.py](cv_02_train.py)
+
+- Train model.
+
+# Step 3 [cv_03_publish.py](cv_03_publish.py)
+
+- Publish model.
+
+# Step 4 [cv_04_test.py](cv_04_test.py)
+
+- Test model using online images
 
 # Credits
 
