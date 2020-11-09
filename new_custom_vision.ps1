@@ -29,4 +29,5 @@ $Env:CV_TRAINING_KEY = $keys_training.Key1
 $Env:CV_PREDICTION_KEY = $keys_prediction.Key1
 $Env:CV_PREDICTION_RESOURCE_ID = $cv_prediction.Id
 
+# Print demo related environment variables
 Get-ChildItem env:* | Where-Object {$_.Name -like 'CV_*'} | Select-Object -Property Name, Value | Format-Table
