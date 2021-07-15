@@ -1,3 +1,8 @@
+# Get current subscription Get-AzContext
+# List subscriptions Get-AzSubscription
+# Select subscription Set-AzContext
+
+
 $location = "westeurope"
 $rg_name = "CustomVisionDemo" + (Get-Random -Minimum 10000 -Maximum 99999)
 
@@ -17,9 +22,6 @@ $cv_prediction
 
 $keys_training = Get-AzCognitiveServicesAccountKey -Name $cv_name_training -ResourceGroupName $rg.ResourceGroupName
 $keys_prediction = Get-AzCognitiveServicesAccountKey -Name $cv_name_prediction -ResourceGroupName $rg.ResourceGroupName
-
-$keys_training
-$keys_prediction
 
 # Put inforamation to temporary environment variable
 # This information is lost after session is closed
